@@ -169,12 +169,20 @@ h2 {
   width: 100%;
 }
 .open-icon {
-  display: block;
+  display: none;
 }
 .close-icon {
   display: none;
   width: 0.9em;
   height: 0.9em;
+}
+
+.container:hover .accordion-wrap > .accordion > .accordion-header > .accordion-icon-wrap > .open-icon {
+  display: block;
+}
+
+.accordion:hover > .accordion-header > .accordion-icon-wrap > .open-icon {
+  display: block;
 }
 
 .accordion-content {
@@ -187,6 +195,7 @@ h2 {
   display: block;
   transition: all 0.8s;
 }
+
 .accordion-content > img {
   width: 100%;
 }
