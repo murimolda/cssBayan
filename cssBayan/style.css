@@ -126,24 +126,23 @@ body {
   background-color: #f6f6ec;
 }
 .container {
-  width: 80%;
+  width: 50%;
   margin: 0 auto;
-  padding: 3rem 0;
+  padding: 2em 0;
 }
 
 h2 {
   font-weight: 700;
-  font-size: 2em;
+  font-size: 1.5em;
   line-height: 2;
   border-bottom: 0.05em #e5e8e7 solid;
 }
 
-.accordion-wrap {
-  margin-top: 1rem;
-}
 .accordion {
+  display: block;
   cursor: pointer;
-  padding-bottom: 1.5rem;
+  padding: 1em 0;
+  border-bottom: 0.05em #e5e8e7 solid;
 }
 
 .accordion input {
@@ -153,7 +152,6 @@ h2 {
 .accordion-header {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 1.5rem;
 }
 .accordion-header-text {
   padding-right: auto;
@@ -181,26 +179,38 @@ h2 {
   display: block;
 }
 
-.accordion:hover > .accordion-header > .accordion-icon-wrap > .open-icon {
+.accordion:active > .accordion-header > .accordion-icon-wrap > .open-icon {
   display: block;
 }
 
 .accordion-content {
-  display: none;
-  width: 100%;
-  transition: all 0.8s;
+  height: 0;
+  text-align: center;
+  transition: all 0.8s ease;
 }
 
 .accordion:hover > .accordion-content {
-  display: block;
-  transition: all 0.8s;
+  height: calc(100vh - 10em);
+  padding-top: 1.25em;
+  transition: all 0.8s ease;
 }
 
 .accordion-content > img {
-  width: 100%;
+  height: 0;
+  transition: all 0.8s ease;
+}
+
+.accordion:hover > .accordion-content > img {
+  height: calc(100vh - 10em);
+  transition: all 0.8s ease;
 }
 
 .accordion-input:checked ~ .accordion-content {
-  display: block;
-  transition: all 0.8s;
+  height: calc(100vh - 10em);
+  transition: all 0.8s ease;
+}
+
+.accordion-input:checked ~ .accordion-content > img {
+  height: calc(100vh - 10em);
+  transition: all 0.8s ease;
 }
