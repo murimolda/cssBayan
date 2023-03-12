@@ -156,31 +156,39 @@ h2 {
 .accordion-header-text {
   padding-right: auto;
 }
-.accordion-icon-wrap {
-  display: flex;
-}
+
 .accordion-icon {
+  width: 0;
+  height: 0;
+  transition: all 0.8s ease;
+}
+
+.container:hover .accordion-wrap > .accordion > .accordion-header > .accordion-icon {
   width: 1em;
   height: 1em;
-}
-.accordion-icon > img {
-  width: 100%;
-}
-.open-icon {
-  display: none;
-}
-.close-icon {
-  display: none;
-  width: 0.9em;
-  height: 0.9em;
+  background-image: url(assets/images/open.svg);
+  transition: all 0.8s ease-in-out;
 }
 
-.container:hover .accordion-wrap > .accordion > .accordion-header > .accordion-icon-wrap > .open-icon {
-  display: block;
+.container:hover .accordion-wrap > .accordion > .accordion-input:checked + .accordion-header > .accordion-icon {
+  width: 1em;
+  height: 1em;
+  background-image: url(assets/images/close.svg);
+  transition: all 0.8s ease-in-out;
 }
 
-.accordion:active > .accordion-header > .accordion-icon-wrap > .open-icon {
-  display: block;
+.container:hover .accordion-wrap > .accordion:hover > .accordion-header > .accordion-icon {
+  width: 1em;
+  height: 1em;
+  background-image: url(assets/images/close.svg);
+  transition: all 0.8s ease-in-out;
+}
+
+.accordion:hover > .accordion-header > .accordion-icon {
+  width: 1em;
+  height: 1em;
+  background-image: url(assets/images/close.svg);
+  transition: all 0.8s ease-in-out;
 }
 
 .accordion-content {
@@ -191,7 +199,6 @@ h2 {
 
 .accordion:hover > .accordion-content {
   height: calc(100vh - 10em);
-  padding-top: 1.25em;
   transition: all 0.8s ease;
 }
 
@@ -213,4 +220,11 @@ h2 {
 .accordion-input:checked ~ .accordion-content > img {
   height: calc(100vh - 10em);
   transition: all 0.8s ease;
+}
+
+.accordion-input:checked + .accordion-header > .accordion-icon {
+  width: 1em;
+  height: 1em;
+  background-image: url(assets/images/close.svg);
+  transition: all 0.8s ease-in-out;
 }
