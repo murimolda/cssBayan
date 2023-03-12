@@ -143,12 +143,20 @@ h2 {
 }
 .accordion {
   cursor: pointer;
+  padding-bottom: 1.5rem;
 }
+
+.accordion input {
+  display: none;
+}
+
 .accordion-header {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 1.5rem;
 }
 .accordion-header-text {
+  padding-right: auto;
 }
 .accordion-icon-wrap {
   display: flex;
@@ -161,6 +169,7 @@ h2 {
   width: 100%;
 }
 .open-icon {
+  display: block;
 }
 .close-icon {
   display: none;
@@ -169,8 +178,20 @@ h2 {
 }
 
 .accordion-content {
+  display: none;
   width: 100%;
+  transition: all 0.8s;
+}
+
+.accordion:hover > .accordion-content {
+  display: block;
+  transition: all 0.8s;
 }
 .accordion-content > img {
   width: 100%;
+}
+
+.accordion-input:checked ~ .accordion-content {
+  display: block;
+  transition: all 0.8s;
 }
