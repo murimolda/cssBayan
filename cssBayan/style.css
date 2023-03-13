@@ -255,13 +255,13 @@ h2 {
 }
 
 .accordion:hover > .accordion-content {
-  height: 100%;
+  height: calc(85vh - 10em);
   transition: all 0.5s ease;
   margin-bottom: 1em;
 }
 
 .accordion:hover > .accordion-content > img {
-  height: 100%;
+  height: calc(85vh - 10em);
   transition: all 0.5s ease;
 }
 
@@ -324,12 +324,12 @@ h2 {
 }
 
 .accordion-input:checked ~ .accordion-content {
-  height: 100%;
+  height: calc(85vh - 10em);
   transition: all 0.5s ease;
   margin-bottom: 1em;
 }
 .accordion-input:checked ~ .accordion-content > img {
-  height: 100%;
+  height: calc(85vh - 10em);
   transition: all 0.5s ease;
 }
 
