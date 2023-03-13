@@ -126,19 +126,20 @@ body {
   background-color: #f6f6ec;
 }
 
+@media screen and (min-width: 1420px) {
+  body {
+    font-size: 1.5rem;
+  }
+}
 @media screen and (max-width: 820px) {
   body {
     font-size: 1rem;
-    font-family: "Roboto Mono";
-    background-color: #f6f6ec;
   }
 }
 
 @media screen and (max-width: 820px) {
   body {
     font-size: 1.1rem;
-    font-family: "Roboto Mono";
-    background-color: #f6f6ec;
   }
 }
 
